@@ -30,7 +30,6 @@ app.get('/all-notes', (req, res) => {
 app.put('/edit-note/:id', (req, res) => {
   const query = req.body
   delete query._id
-  console.log(query)
   db.collection('notes').updateOne({ '_id': new ObjectID(req.params.id) }, {$set: query}).then(() => {
     res.sendStatus(200)
   }).catch(() => res.sendStatus(500))
