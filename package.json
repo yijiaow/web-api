@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "nodemon": "nodemon server.js",
+    "nodemon": "nodemon index.js",
     "watch": "watchify client.js -vd -o bundle.js",
     "lint": "run-p lint:*",
     "lint:html": "htmlhint ./**/*.html",
